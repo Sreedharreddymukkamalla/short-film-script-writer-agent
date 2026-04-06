@@ -4,17 +4,15 @@ from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPConnecti
 
 root_agent = Agent(
     model='gemini-2.5-flash',
-    name='root_agent',
-    description='An expert otaku assistant for discovering anime.',
+    name='short_film_script_writer',
+    description='The agent writes script for the short film based on the premise provided by the user.',
     instruction="""
-        You are an Anime Show Finder. Help users find anime based on 
-        genre, mood, or similar shows they enjoy. 
-        Always provide the Title, a brief synopsis, and where to watch.
+        The agent writes script for the short film based on the premise provided by the user. The script should be professional and also 2 pages.
     """,
     tools=[
         McpToolset(
             connection_params=StreamableHTTPConnectionParams(
-                url="https://aeo-mcp-server.amdal-dev.workers.dev/mcp",
+                url="https://example.com/mcp",
             ),
         )
     ],
