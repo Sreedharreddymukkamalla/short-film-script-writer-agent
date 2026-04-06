@@ -37,7 +37,7 @@ app.router.redirect_slashes = False
 
 AGENT_URL = os.getenv(
     "AGENT_PUBLIC_URL",
-    "https://capital-agent-service-git-475756125529.us-central1.run.app/anime/",
+    "https://short-film-script-writer-475756125529.us-central1.run.app/anime/",
 )
 
 agent_card = AgentCard(
