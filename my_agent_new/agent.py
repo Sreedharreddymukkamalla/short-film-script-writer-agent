@@ -9,11 +9,4 @@ root_agent = Agent(
     instruction="""
         The agent writes script for the short film based on the premise provided by the user. The script should be professional and also 2 pages.
     """,
-    tools=[
-        McpToolset(
-            connection_params=StreamableHTTPConnectionParams(
-                url="https://example.com/mcp",
-            ),
-        )
-    ],
 )
